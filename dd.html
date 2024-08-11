@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+            font-size: 12px;
+
+            text-decoration: none;
+
+            box-sizing: border-box;
+        }
+
+        a{
+            color: #000;
+        }
+        
+        body{
+            height: 1920px;
+
+            width: auto;
+            
+            background-color: #A7BFAD;
+        }
+
+        .wrap{
+            width: 1240px;
+            height: 1920px;
+
+            margin: 0 auto;
+
+            background-color: #ffffff;
+        }
+
+        .banner{
+            width: 1240px;
+            height: 112px;
+
+            margin: auto;
+        }
+
+        .nav_l{
+            margin: 50px;
+
+            float: left;
+        }
+
+        .nav_r{
+            margin: 50px;
+
+            float: right;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            float: left;
+
+            padding: 0 5px;
+
+            border-right: 1px solid #000;
+        }
+
+        li:last-child{
+            border-right: none;
+        }
+
+        .content{
+            width: 1240px;
+            height: 100%;
+
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        .title-wrap1{
+            width: 100%;
+            height: fit-content;
+
+            margin-top: 50px;
+
+            text-align: center;
+
+            border-bottom: 2px solid #a9a9a9 ;
+        }
+
+        .title-wrap2{
+            height: 25px;
+
+            margin: 10px 0;
+            padding: 0 25px;
+
+            text-align: left;
+            line-height: 25px;
+        }
+
+        .title-wrap1>p{
+            color: gray;
+            margin-bottom: 10px;
+        }
+        .title-wrap1>h1{
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .title-wrap2>a{
+            float: left;
+
+            width: 25px;
+            height: 25px;
+
+            margin-right: 10px;
+
+            border: 1px solid #a9a9a9;
+            border-radius: 50%;
+
+            overflow: hidden;
+        }
+        .title-wrap2>a>img{
+            width: 100%;
+            height: 100%;
+        }
+        .title-wrap2>p{
+            float: left;
+            margin-right: 10px;
+        }
+
+        /*
+        .wrap{
+            width: auto;
+            background-color: #A7BFAD;
+            height: 1920px;
+        }
+
+        .wrap2{
+            width: 1240px;
+            background-color: #ffffff;
+            height: 1920px;
+            margin: 0 auto;
+        }
+
+        .float_l{float: left;}
+        .float_r{float: right;}
+        .hidden{overflow: hidden;}
+
+        .center{margin: 0 auto;}
+        .margin50px{margin: 50px;}
+        .marginl50px{margin-left: 50px;}
+        .marginr50px{margin-right: 50px;}
+        .margintop50px{margin-top: 50px;}
+
+        .fit{width: fit-content;}
+        .font_40px{font-size: 40px;}
+
+        .line{
+            border-bottom: 1px #a9a9a9 solid;
+            width: 1200px;
+            margin: 0 auto;
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="banner">
+            <div class="nav_l">
+                <ul>
+                    <li><a href="#">프롤로그</a></li>
+                    <li><a href="#">블로그</a></li>
+                </ul>
+            </div>
+            <div class="nav_r">
+                <ul>
+                    <li><a href="#">이웃블로그</a></li>
+                    <li><a href="#">블로그홈</a></li>
+                    <li><a href="#">내 메뉴</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title-wrap1">
+                <p>게시판</p>
+                <h1>대충 제목이에요~</h1>
+                
+                <div class="title-wrap2">
+                    <a href="#"><img src="data:image/png;base64,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" alt="사진"></a>
+                    <p>김중유</p>
+                    <p>2024.08.11</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="wrap">
+        <div class="wrap2">
+            <div id="banner" class="hidden">
+                <p class="float_l margin50px">프롤로그|블로그</p><p class="float_r margin50px">이웃블로그|블로그홈|내 메뉴</p>
+            </div>
+                <div style="margin-top: 300px;">
+                    <p class="center fit">게시판</p>
+                    <h1 class="center fit font_40px">대충 제목이에요~</h1>
+                </div>
+                <div class="line">
+                        <p style="margin: 50px 0px 15px 50px;">김중유&nbsp;&nbsp;&nbsp;2024.08.11</p>
+                </div>
+            <div>    
+        </div>
+    </div> -->
+</body>
+</html>
